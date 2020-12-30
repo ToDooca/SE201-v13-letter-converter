@@ -71,7 +71,9 @@ public class LetterConverter {
         "\u0160", "\u0161"};
 
     public static void main(String[] args) {
-		
+        // test metoda
+        System.out.println(latinToCyrillic("test latinice u ćirilicu"));
+        System.out.println(cyrilicToLatin("тест ћирилице у латиницу"));
     }
 
     static Map<Character, String> cyrMapping = new HashMap<Character, String>();
