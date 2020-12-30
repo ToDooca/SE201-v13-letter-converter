@@ -71,11 +71,19 @@ public class LetterConverter {
         "\u0160", "\u0161"};
 
     public static void main(String[] args) {
-
+		
     }
 
     static Map<Character, String> cyrMapping = new HashMap<Character, String>();
     static Map<String, Character> latMapping = new HashMap<String, Character>();
+
+	static {			
+		for (int i=0; i < cyrilic.length; i++) {
+			cyrMapping.put(new Character(cyrilic[i]), latin[i]);
+			latMapping.put(latin[i], new Character(cyrilic[i]));
+		}
+	}
+
 
     public static String latinToCyrillic(String latinText) {
         StringBuffer latBuffer = new StringBuffer(latinText);
